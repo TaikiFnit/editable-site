@@ -5,15 +5,31 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <MainTextAreaw />
+    );
+  }
+}
+
+class MainTextAreaw extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {textAreaValue: ""}
+    this.onChangeText = this.onChangeText.bind(this);
+  }
+
+  onChangeText(e) {
+    this.setState({textAreaValue: e.target.value});
+    console.log(e.target.value)
+  }
+
+  onClick() {
+    this.setState({textAreaValue: this.refs.textArea.getDOMNode().value});
+  }
+
+  render() {
+    return (
+        <textarea value={this.state.textAreaValue} onChange={this.onChangeText} />
     );
   }
 }
