@@ -10,6 +10,7 @@ html, body, #root {
   height: 100%;
   background: rgb(30, 30, 30);
   color: rgb(212, 212, 212);
+  font-family: monospace;
 }
 
 textarea {
