@@ -63,6 +63,14 @@ class MainTextArea extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.textAreaValue !== nextState.textAreaValue) {
+      return true
+    }
+
+    return false
+  }
+
   onUpdate(snapshot) {
       const textAreaValue = snapshot.val() || ""
       this.setState({textAreaValue: textAreaValue, isRendered: true})
