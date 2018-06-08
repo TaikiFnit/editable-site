@@ -6,15 +6,22 @@
   padding: 0;
 }
 
-html, body, #root, .container {
+html,
+body,
+#root,
+.container {
   width: 100%;
   height: 100%;
-  background: rgb(30, 30, 30);
+  background: rgb(44, 52, 65);
   color: rgb(212, 212, 212);
 }
 
-html, body, #root, pre, textarea {
-  font-family: 'Roboto Mono', monospace; 
+html,
+body,
+#root,
+pre,
+textarea {
+  font-family: 'Roboto Mono', monospace;
   font-weight: 400;
 }
 
@@ -26,6 +33,6 @@ header {
 textarea {
   width: 100%;
   border: none;
-  background: rgb(30, 30, 30);
+  background: rgb(44, 52, 65);
   color: rgb(212, 212, 212);
 }
