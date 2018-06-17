@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { firebaseDb } from '../firebase/';
+import './MainTextArea.css';
+
 const textRef = firebaseDb.ref('editable-site/textAreaValue');
 
-export default class MainTextArea extends React.Component {
+export default class MainTextArea extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +26,7 @@ export default class MainTextArea extends React.Component {
   }
 
   componentDidUpdate() {
-    if (this.mainTextArea.scrollHeight != this.mainTextArea.clientHeight) {
+    if (this.mainTextArea.scrollHeight !== this.mainTextArea.clientHeight) {
       this.setState({ textAreaHeight: this.mainTextArea.scrollHeight });
     }
   }
@@ -59,6 +61,7 @@ export default class MainTextArea extends React.Component {
         style={{
           height: this.state.textAreaHeight
         }}
+        className="editableTextArea"
       />
     );
   }

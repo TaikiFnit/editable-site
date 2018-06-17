@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import MainTextArea from './MainTextArea';
-import FnitArt from './FnitArt';
-import './App.css';
+import './TextSharing.css';
 
-class App extends Component {
+class TextSharing extends Component {
   constructor(props) {
     super(props);
     this.onClickView = this.onClickView.bind(this);
@@ -16,11 +15,10 @@ class App extends Component {
   render() {
     return (
       <div className="container" onClick={this.onClickView}>
-        <FnitArt />
         <MainTextArea ref="mainTextArea" />
       </div>
     );
   }
 }
 
-export default App;
+export default TextSharing;
