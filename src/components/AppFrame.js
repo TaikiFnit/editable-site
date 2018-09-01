@@ -14,15 +14,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 const drawerWidth = 200;
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1
-  },
   appFrame: {
     zIndex: 1,
     overflow: 'hidden',
     position: 'relative',
     display: 'flex',
-    width: '100%'
+    width: '100%',
+    height: '100vh'
   },
   appBar: {
     width: `calc(100% - ${drawerWidth}px)`,
