@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { firebaseDb } from '../firebase/';
-import './MainTextArea.css';
+import '../styles/css/MainTextArea.css';
 
 const textRef = firebaseDb.ref('editable-site/textAreaValue');
 
